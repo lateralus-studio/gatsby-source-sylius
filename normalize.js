@@ -50,7 +50,7 @@ const adaptProduct = ({ product, syliusUrl }) => {
     channelCode: product.channelCode,
     averageRating: product.averageRating,
     firstImage: product.images[0]
-      ? `${syliusUrl}/media/image/${product.images[0].path}`
+      ? `https:${product.images[0].path}`
       : null,
     variants: adaptVariants(product.variants),
     taxons: product.taxons,
