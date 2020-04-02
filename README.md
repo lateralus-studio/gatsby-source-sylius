@@ -1,3 +1,12 @@
+# Lateralus Notes
+
+This is a cloned (not forked as you can't fork subfolders, unfortunately) repository of the gatsby source plugin for Sylius.
+The reasons for cloning it are the immature ("Alpha") support of features from the base repo, such as:
+- Hardcoded image URLs which break when you use CDNs.
+- No support for locales.
+
+--------
+
 # gatsby-source-sylius
 
 A Gatsby source plugin for sourcing data from Sylius via the [ShopApiPlugin](https://github.com/Sylius/ShopApiPlugin).
