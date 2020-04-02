@@ -1,6 +1,7 @@
 module.exports = ({ node, getNode, createNodeId, createNodeField }) => {
   if (
     node &&
+    node !== undefined &&
     node.internal &&
     node.internal.type === "Product" &&
     node.taxons

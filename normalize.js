@@ -50,7 +50,7 @@ const adaptProduct = ({ product, syliusUrl }) => {
     channelCode: product.channelCode,
     averageRating: product.averageRating,
     firstImage: product.images[0]
-      ? `https:${product.images[0].path}`
+      ? ensureHttps(product.images[0].path)
       : null,
     variants: adaptVariants(product.variants),
     taxons: product.taxons,
@@ -58,3 +58,10 @@ const adaptProduct = ({ product, syliusUrl }) => {
 };
 
 module.exports = { adaptCategory, adaptProduct };
+
+const ensureHttps = (url) => {
+  if (url.substr(0, 2) === "//") {
+    url = "https:" + url 
+  }
+  return url;
+}
